@@ -1,0 +1,13 @@
+{
+    "name": "vendor/blocks",
+    "description": "dossier contenant les données des différents éléments du jeu",
+    "type": "library",
+    "license": "n",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {}
+}
