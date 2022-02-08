@@ -2,24 +2,46 @@
 
 namespace App;
 
-abstract class Player
+class Player
 {
-    /*Nombre de points de vie*/
-    abstract public function hp();
-
-    /*Points de dégats*/
-    abstract public function damages();
+    public $hp;
+    public $atq;
 
     /* Attaque du joueur*/
-    public function atq()
+    public function setAtq($atq)
     {
-        return hp()-damages();
+        $this->hp = $this->hp - $atq;
+        return $this->hp;
     }
     /*Dégats infligés par les ennemies en tenant compte de l'armure du héros*/
-    public function damages_dealt()
+    public function setDamagesDealt($atq)
     {
-        return hp()-(damages()-armor());
-    }
-    
+        if($this->armor > 0){
+            
+            $this->armor = $this->armor - $atq ;
+            return $this->armor;
+        }
 
+        else if($this->armor < 0){
+            
+            $this->hp = $this->hp + $this->armor;
+            $this->armor = 0;
+            return $this->hp;
+        }
+
+        else{
+
+            $this->hp = $this->hp - $atq ;
+            
+            if($this->hp > 0){
+
+                return $this->hp;
+            }
+            else{
+                
+                echo "vous êtes mort";
+            }
+            
+        }
+    }
 }
