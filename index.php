@@ -1,15 +1,17 @@
 <?php 
- namespace App;
 
- use App\Player;
- use App\Ennemy; 
- use App\Heros;
+namespace App;
+
+use App\Player;
+use App\Ennemy; 
+use App\Heros;
 
 
 
- require 'vendor/autoload.php';
+require 'vendor/autoload.php';
 
- $hero = new Heros;
+
+$hero = new Heros;
 //  echo $hero->getHp()."<br>";
 //  echo $hero->setBonushp()."<br>";
 //  echo $hero->getArmor()."<br>";
@@ -25,34 +27,49 @@
 //  echo $lieutenant_minion->getDamages()."<br>";
 //  var_dump($lieutenant_minion);
 
- $chef_minion = new Chef_minion;
+$chef_minion = new Chef_minion;
 //  echo $chef_minion->getHp().'<br>';
 //  echo $chef_minion->getDamages()."<br>";
 //  var_dump($chef_minion);
 
 
 
-
+/* 
 for($i=0;$i<5;$i++){
-var_dump($hero->getArmor());
-var_dump($hero->getHp());
- $hero->setDamagesDealt($chef_minion->getDamages())."<br>";
- $chef_minion->setAtq($hero->getDamages())."<br>";
- $hero->randomBonus();
-}
+    $hero->setDamagesDealt($chef_minion->getDamages())."<br>";
+    $chef_minion->setAtq($hero->getDamages())."<br>";
+    $hero->randomBonus();
+} */
 
-
-
-
-
-
-
-
-//
- echo $chef_minion->setAtq($hero->getDamages())."<br>";
 
 
 // var_dump($hero)."<br>";
 // echo $hero->setDamagesDealt($chef_minion->getDamages())."<br>";
 // echo $hero->setDamagesDealt($chef_minion->getDamages())."<br>";
 // var_dump($hero)."<br>";
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>BAGARRE</title>
+</head>
+<body>
+    <section class="mainContainer">
+        <div id="sprite-container2">
+            <div id="sprite-image2"></div>
+            <button id="attack2">Attaquer</button>
+        </div>
+        <div id="sprite-container">
+            <div id="sprite-image"></div>
+            <button id="attack">Attaquer</button>
+        </div>
+    </section>
+    
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

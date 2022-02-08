@@ -1,0 +1,90 @@
+/* Background */
+
+body {
+	background: linear-gradient(-45deg, #000000, #302f2f, #7b7d7e, #c7c9c8);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+/* Sprite image animation */
+
+#sprite-image, #sprite-image2{
+    height: 145px;
+    width: 110px;
+    background: url("../img/pngwing.com.png") 0px 0px;
+    position: absolute;
+}
+
+#sprite-container, #sprite-container2{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 25%;
+}
+
+.mainContainer{
+    display: flex;
+}
+
+#attack, #attack2{
+    position: absolute;
+    top: 120px;
+}
+
+
+
+.slideOutLeft {
+    -webkit-animation-name: slideOutLeft;
+    animation-name: slideOutLeft;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    }
+    
+    @-webkit-keyframes slideOutLeft {
+        0% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+        50%{
+            -webkit-transform: translateX(-150%);
+            transform: translateX(-150%);
+        }
+        100% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes slideOutLeft {
+        0% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+        50%{
+            -webkit-transform: translateX(-150%);
+            transform: translateX(-150%);
+        }
+        100% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+    } 
