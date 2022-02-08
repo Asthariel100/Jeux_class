@@ -9,8 +9,8 @@ class Chef_minion extends Player
    
     function __construct()
     {
-        $this->hp =100;
-        $this->atq = 400;
+        $this->hp =10;
+        $this->atq = 10;
         $this->getHp();
         $this->getDamages();
     }

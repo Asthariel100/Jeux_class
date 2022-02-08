@@ -26,7 +26,13 @@ class Player
             
             $this->hp = $this->hp + $this->armor;
             $this->armor = 0;
+            if($this->hp <= 0){
+                echo "vous êtes mort";
+            }
+            else{
+
             return $this->hp;
+            }
         }
 
         else{
@@ -44,4 +50,5 @@ class Player
             
         }
     }
+    
 }

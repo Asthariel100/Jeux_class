@@ -48,6 +48,31 @@ use App\Player;
             echo "vous êtes mort";
         }
     }
+
+    public function randomBonus()
+    {
+        $randBonushp = rand(0,100);
+
+        if($randBonushp < 30)
+        {
+           return $this->setBonusHp();
+        }
+        else
+        {
+            echo "pas de bonus  de vie pour ce tour<br>";
+        }
+
+        $randBonusArmor = rand(0, 100);
+
+        if($randBonusArmor < 20)
+        {
+            return $this->setArmorBonus();
+        }
+        else
+        {
+            echo "pas de bonus d'armure pour ce tour<br>";
+        }
+    }
 }
 
 
