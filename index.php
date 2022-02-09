@@ -61,14 +61,33 @@ for($i=0;$i<5;$i++){
 <body>
     <h1 class="title">Battle For Life</h1>
     <section class="mainContainer">
+
         <div id="sprite-container2">
             <div id="sprite-image2"></div>
+
             <button id="attack2">Attaquer</button>
+
+            <div id="bar">
+                <div id="health"></div>
+                <div id="lost"></div>
+                <div id="heal"></div>
+            </div>
+
         </div>
+
         <div id="sprite-container">
             <div id="sprite-image"></div>
+
             <button id="attack">Attaquer</button>
+
+            <div id="bar">
+                <div id="health"></div>
+                <div id="lost"></div>
+                <div id="heal"></div>   
+            </div>
+
         </div>
+
     </section>
     
     <script  type="text/javascript" src="assets/js/script.js"></script>
