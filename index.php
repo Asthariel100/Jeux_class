@@ -70,6 +70,15 @@ for($i=0;$i<5;$i++){
 echo '<br>';
 var_dump($hero);
 echo '<hr><br>';
+
+     function combat($a,$b) {
+    $a->setAtq($b->getDamages());
+  }
+
+  if (isset($_GET['hello'])) {
+    combat($chef_minion,$hero);
+  }
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -80,12 +89,48 @@ echo '<hr><br>';
     <title>Document</title>
 </head>
 <body>
-    <h1 id="test"><?php echo json_encode($hero); ?><h1>
+    <h1 id="test"><h1>
+        <h2 id="test2"></h2>
+        <h2 id="test3"></h2>
+        <h2 id="test4"></h2>
+    <a href='index.php?hello=true'>Run PHP Function</a> 
+        <button id="combat">FIGHT!</button>
+        
     <script>
-       
-        var herohp = document.getElementById('test').innerHTML;
-        console.log(herohp);
-       
+
+         var statsHero = <?php echo json_encode($hero); ?>;
+         var showHero = document.getElementById('test');
+        showHero.innerHTML = "HP " + statsHero['hp']+"<br>ATQ"+statsHero['atq']+"<br>ARMOR "+statsHero['armor'];;
+
+        var statsMinions = <?php echo json_encode($minion); ?>;
+        var showMinions = document.getElementById('test2');
+        showMinions.innerHTML = "HP " + statsMinions['hp']+"<br>ATQ "+statsMinions['atq'];;
+
+        var statsLieutenantMinions = <?php echo json_encode($lieutenant_minion); ?>;
+        var showLieutenantMinions = document.getElementById('test3');
+        showLieutenantMinions.innerHTML = "HP " + statsLieutenantMinions['hp']+"<br>ATQ "+statsLieutenantMinions['atq'];
+
+        var statsChefMinions = <?php echo json_encode($chef_minion); ?>;
+        var showChefMinions = document.getElementById('test4');
+        showChefMinions.innerHTML = "HP " + statsChefMinions['hp']+"<br>ATQ "+statsChefMinions['atq'];
+
+    //     document.onkeydown = clavier;
+    //     function clavier(e) {
+    //         if(e.keyCode == '38') 
+    //         {
+    //              console.log('test');
+    //             combat();
+    //         }
+    //     }
+    //     document.getElementById("combat").addEventListener("click", combat);
+
+    //  function combat(a, statsChefMinions['hp'])
+    //  {   
+    //       a = <?php $chef_minion->setAtq($hero->getDamages()); ?>
+    //       statsChefMinions['hp'] = a;
+    //  }
+    
+
     </script>
 
 </body>
