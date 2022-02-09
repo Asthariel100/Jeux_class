@@ -33,7 +33,6 @@ $chef_minion = new Chef_minion;
 //  var_dump($chef_minion);
 
 
-
 /* 
 for($i=0;$i<5;$i++){
     $hero->setDamagesDealt($chef_minion->getDamages())."<br>";
@@ -47,6 +46,7 @@ for($i=0;$i<5;$i++){
 // echo $hero->setDamagesDealt($chef_minion->getDamages())."<br>";
 // echo $hero->setDamagesDealt($chef_minion->getDamages())."<br>";
 // var_dump($hero)."<br>";
+
 ?>
 
 <!DOCTYPE html>
@@ -59,6 +59,7 @@ for($i=0;$i<5;$i++){
     <title>BAGARRE</title>
 </head>
 <body>
+    <h1 class="title">Battle For Life</h1>
     <section class="mainContainer">
         <div id="sprite-container2">
             <div id="sprite-image2"></div>
@@ -70,6 +71,6 @@ for($i=0;$i<5;$i++){
         </div>
     </section>
     
-    <script src="assets/js/script.js"></script>
+    <script  type="text/javascript" src="assets/js/script.js"></script>
 </body>
 </html>

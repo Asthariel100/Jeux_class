@@ -1,31 +1,39 @@
 /* Background */
 
 body {
-	background: linear-gradient(-45deg, #000000, #302f2f, #7b7d7e, #c7c9c8);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-	height: 100vh;
+	background: url("../img/streetfighterbackground.gif");
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
 }
 
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+.title{
+    position: relative;
+    z-index: 10;
+    margin-top: 20px;
+    transform: rotateX(21deg);
+    margin-bottom: 40px;
+    color: #fff;
+    font-size: 5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -4px;
+    text-align: center;
+    text-shadow: 2px 1px 0px #d2d2d2, 4px 2px 0px #4f3256, 3px 1px 6px #000000;
 }
 
+/* Sprite images animation */
 
-/* Sprite image animation */
-
-#sprite-image, #sprite-image2{
+#sprite-image{
     height: 145px;
     width: 110px;
     background: url("../img/pngwing.com.png") 0px 0px;
+}
+
+#sprite-image2{
+    height: 80px;
+    width: 70px;
+    background: url(../img/PngItem_198416.png) 0px 0px;
     position: absolute;
 }
 
@@ -36,7 +44,7 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    margin-top: 25%;
+    margin-top: 15%;
 }
 
 .mainContainer{
@@ -45,10 +53,12 @@ body {
 
 #attack, #attack2{
     position: absolute;
-    top: 120px;
+    top: 232px;
 }
 
 
+
+/* Animation punch vers la gauche */
 
 .slideOutLeft {
     -webkit-animation-name: slideOutLeft;
@@ -87,4 +97,45 @@ body {
             -webkit-transform: translateX(0);
             transform: translateX(0);
         }
+    } 
+
+
+/* Animatation punch vers la droite */
+.slideOutRight {
+    -webkit-animation-name: slideOutRight;
+    animation-name: slideOutRight;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    }
+    @-webkit-keyframes slideOutRight {
+    0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    }
+    50%{
+        -webkit-transform: translateX(150%);
+        transform: translateX(150%);
+    }
+    100% {
+    visibility: hidden;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    }
+    }
+    @keyframes slideOutRight {
+    0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    }
+    50% {
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+    100% {
+    visibility: hidden;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    }
     } 
